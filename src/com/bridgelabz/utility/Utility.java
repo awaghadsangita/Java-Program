@@ -46,4 +46,11 @@ public class Utility {
 					
 		return false;
 	}
+	public boolean isStringLengthGraterThree(String str)
+	{
+		if(str.length()>3)
+			return true;
+		
+		return false;
+	}
 }
