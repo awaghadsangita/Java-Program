@@ -21,6 +21,7 @@ public class HarmonicNumber {
 			mN=scanner.nextInt();
 		}while(utility.isGreaterThanZero(mN));//terminate when mN is less than zero
 		
+		
 		for(int i=1;i<=mN;i++)
 		{
 			mHarmonicnumber+=(float)1/i;

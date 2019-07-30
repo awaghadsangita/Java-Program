@@ -16,6 +16,7 @@ public class FlipCoin {
 		Scanner scanner=new Scanner(System.in);
 		int mNumberOfTime,mTrails=0,mHeadCount=0,mTailCount=0;
 		
+		
 		System.out.println("How Many time You want to flip coin");
 		mNumberOfTime=scanner.nextInt();
 

@@ -43,6 +43,7 @@ public class Gambler {
 						mCash--;
 					}
 				
+					
 				if(mCash==mGoal)
 				{
 					System.out.println("You Win the Game and Achive Goal");

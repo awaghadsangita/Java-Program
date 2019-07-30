@@ -27,6 +27,7 @@ public class PrimeFactor {
 				System.out.print(i+" ");
 				n=n/i;
 			}	
+			
 		}
 		if(n>2)
 			System.out.print(n+"");

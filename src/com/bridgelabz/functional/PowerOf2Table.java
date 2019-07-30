@@ -22,6 +22,7 @@ public class PowerOf2Table {
 					mTable *=2;
 					
 				}
+				
 		}
 		else
 		{

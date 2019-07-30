@@ -25,6 +25,7 @@ public class CouponNumbers {
 		
 		for(i=0;i<mNumber;i++)
 		{
+			
 			int mRandomNumber=utility.giveRandomNumber(mNumber+1);//give random number between 0 to mNumber
 			int k=0;
 			for(int j=0;j<i;j++)
