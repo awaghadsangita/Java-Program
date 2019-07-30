@@ -58,6 +58,14 @@ public class Utility {
 		return rand.nextFloat();
 	}
 	/*
+	 * Return Random number between 0 and N
+	 */
+	public int giveRandomNumber(int N)
+	{
+		Random rand=new Random();
+		return rand.nextInt(N);
+	}
+	/*
 	 * Calculate Perecentage
 	 * @param : numberoftimes out of totalcount 
 	 * return percentage
