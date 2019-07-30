@@ -53,4 +53,19 @@ public class Utility {
 		
 		return false;
 	}
+	/*
+	 * @purpose	:check argaument is in range between 1 to 32
+	 * @param	: it take parameter number 
+	 */
+	public boolean isInRange(int number)
+	{
+		return number>=1 && number<=32;
+	}
+	/*
+	 * @purpose	:Check Number N is greater than zero
+	 */
+	public boolean isGreaterThanZero(int N)
+	{
+		return N<0;
+	}
 }
