@@ -25,7 +25,29 @@ public class LinkedList {
 			}
 			temp.next=newNode;
 		}
-		System.out.print(newNode.number);
+//		System.out.print(newNode.number);
+	}
+	public static void addDataInSortedList(int item) //adding element after last node
+	{
+		Node newNode=new Node();
+		newNode.number=item;
+		Node temp=HEAD;
+		if(temp.number>newNode.number)
+		{
+			newNode.next=temp;
+			HEAD=newNode;
+		}
+		else
+		{
+			
+			while(temp.next.number<newNode.number)
+			{
+				temp=temp.next;
+			}
+			newNode.next=temp.next;
+			temp.next=newNode;
+		}
+//		System.out.print(newNode.number);
 	}
 	
 	public static void show()// traverse linked list 
@@ -78,14 +100,14 @@ public class LinkedList {
 		}
 		else
 		{
-			while(count<pos-1)
+			while(count<pos && previous!=null)
 			{
 				previous=previous.next;
+				count++;
 				
 			}
 			Node current=previous.next;
 			previous.next=current.next;
-			current=null;
 			
 		}
 	}
@@ -97,9 +119,9 @@ public class LinkedList {
 			{
 				if(i.number>j.number)
 				{
-					int temp=i.number;
-					i.number=j.number;
-					j.number=temp;
+					Node temp=i;
+					i=j;
+					j=temp;
 				}	
 				
 			}
