@@ -28,10 +28,12 @@ public class OrderedList {
 			while(scanner.hasNext())
 			{
 				data=scanner.nextInt();
+//				System.out.println(data);
 				LinkedList.add(data);
 			}
 			int search;
 			Node previous=LinkedList.HEAD;
+			System.out.println();
 			LinkedList.sort();
 			do
 			{
@@ -45,6 +47,7 @@ public class OrderedList {
 					if(position!=-1)
 					{
 						System.out.println(search +" is FOUND");
+						System.out.println(position +" is FOUND");
 						LinkedList.delete(position);
 						
 					}
@@ -52,8 +55,8 @@ public class OrderedList {
 					{
 						
 						System.out.println(search +" is NOT FOUND in slot ");
-						LinkedList.add(search);
-						
+//						LinkedList.add(search);
+						LinkedList.addDataInSortedList(search);
 					}
 				}
 				
