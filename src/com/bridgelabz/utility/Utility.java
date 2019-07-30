@@ -48,6 +48,7 @@ public class Utility {
 					
 		return false;
 	}
+
 	/*
 	 * Return Random number between 0 and 1
 	 */
@@ -64,5 +65,13 @@ public class Utility {
 	public float calculatePercentage(int totalcount,int numberoftimes)
 	{
 		return numberoftimes*100/totalcount;
+	}
+	public boolean isStringLengthGraterThree(String str)
+	{
+		if(str.length()>3)
+			return true;
+		
+		return false;
+
 	}
 }
