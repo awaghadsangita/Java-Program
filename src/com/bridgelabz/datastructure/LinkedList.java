@@ -1,5 +1,8 @@
 package com.bridgelabz.datastructure;
-
+/*
+ * @purpose	: function for creating node,find data in particular node,
+ * finding position of item in linked list,displaying linked list
+ */
 public class LinkedList {
 	static Node HEAD=new Node();// head pointer
 	

@@ -41,14 +41,14 @@ public class OrderedList {
 				search=scannerUserValue.nextInt();
 				if(search!=0)
 				{
-					int position=LinkedList.index(search);
+					int position=LinkedList.index(search);//finding position of item in linked list
 					if(position!=-1)
 					{
 						System.out.println(search +" is FOUND");
 						LinkedList.delete(position);
 						
 					}
-					else 
+					else //item not present add node in linked list
 					{
 						
 						System.out.println(search +" is NOT FOUND in slot ");
