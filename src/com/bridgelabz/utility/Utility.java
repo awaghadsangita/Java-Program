@@ -6,6 +6,8 @@
  */
 package com.bridgelabz.utility;
 
+import java.util.Random;
+
 public class Utility {
 /*
  * @param year taking year as an argument.
@@ -46,12 +48,31 @@ public class Utility {
 					
 		return false;
 	}
+
+	/*
+	 * Return Random number between 0 and 1
+	 */
+	public float giveRandomNumber()
+	{
+		Random rand=new Random();
+		return rand.nextFloat();
+	}
+	/*
+	 * Calculate Perecentage
+	 * @param : numberoftimes out of totalcount 
+	 * return percentage
+	 */
+	public float calculatePercentage(int totalcount,int numberoftimes)
+	{
+		return numberoftimes*100/totalcount;
+	}
 	public boolean isStringLengthGraterThree(String str)
 	{
 		if(str.length()>3)
 			return true;
 		
 		return false;
+
 	}
 	/*
 	 * @purpose	:check argaument is in range between 1 to 32
