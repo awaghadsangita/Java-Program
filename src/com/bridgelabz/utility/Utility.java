@@ -109,4 +109,5 @@ public class Utility {
 	{
 		return scanner.nextInt();
 	}
+	
 }
