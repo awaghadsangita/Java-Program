@@ -7,34 +7,41 @@
 package com.bridgelabz.utility;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Utility {
 /*
  * @param year taking year as an argument.
  * return 1 if year is leap year and 0 if year is not leap year
  * 
+ *
  */
-	
-	public int checkerLeapYear(int year)
+	final Scanner scanner=new Scanner(System.in);
+	public boolean checkerLeapYear(final int year)
 	{
+		boolean mIsLeap=false;
 		if(year%4==0)
 		{
 				if( year % 100 == 0)
 	            {
 	                // year is divisible by 400, hence the year is a leap year
 	                if ( year % 400 == 0)
-	                    return 1;
+	                	{
+	                		mIsLeap=true;
+	                	}
 	                else
-	                    return 0;
-	            }
+	                {
+	                	mIsLeap=false;
+	                }
+	            }	
 	            else
-	                return 1;
-			}
-			else
-			{
-				return 0;
-			}
-		
+	                mIsLeap=true;
+		}
+		else
+		{
+			mIsLeap=false;
+		}
+		return mIsLeap;
 		
 	}
 	/*
@@ -42,11 +49,9 @@ public class Utility {
 	 * return true if year is four digit and false if year is not four digit
 	 * 
 	 */
-	public boolean isFourDigit(int year)
+	public boolean isFourDigit(final int year)
 	{
-		if(year<=1000 && year<=9999) return true;
-					
-		return false;
+		return year<=1000 && year<=9999;
 	}
 
 	/*
@@ -54,47 +59,54 @@ public class Utility {
 	 */
 	public float giveRandomNumber()
 	{
-		Random rand=new Random();
+		final Random rand=new Random();
 		return rand.nextFloat();
-	}
+	}                                                                                      
 	/*
 	 * Return Random number between 0 and N
 	 */
-	public int giveRandomNumber(int N)
+	public int giveRandomNumber(final int mNumber)
 	{
-		Random rand=new Random();
-		return rand.nextInt(N);
+		final Random rand=new Random();
+		return rand.nextInt(mNumber);
 	}
 	/*
 	 * Calculate Perecentage
 	 * @param : numberoftimes out of totalcount 
 	 * return percentage
 	 */
-	public float calculatePercentage(int totalcount,int numberoftimes)
+	public float calculatePercentage(final int totalcount,final int numberoftimes)
 	{
 		return numberoftimes*100/totalcount;
 	}
-	public boolean isStringLengthGraterThree(String str)
+	/*
+	 * Check length of string is greater than three
+	 */
+	public boolean isStringLengthGraterThree(final String str)
 	{
-		if(str.length()>3)
-			return true;
-		
-		return false;
+		return str.length()>3;
 
 	}
 	/*
 	 * @purpose	:check argaument is in range between 1 to 32
 	 * @param	: it take parameter number 
 	 */
-	public boolean isInRange(int number)
+	public boolean isInRange(final int number)
 	{
 		return number>=1 && number<=32;
 	}
 	/*
 	 * @purpose	:Check Number N is greater than zero
 	 */
-	public boolean isGreaterThanZero(int N)
+	public boolean isGreaterThanZero(final int mNumber)
 	{
-		return N<0;
+		return mNumber<0;
+	}
+	/*
+	 * return integer value
+	 */
+	public int getInteger()
+	{
+		return scanner.nextInt();
 	}
 }

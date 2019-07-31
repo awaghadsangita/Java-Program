@@ -100,7 +100,7 @@ public class LinkedList {
 		}
 		else
 		{
-			while(count<pos && previous!=null)
+			while(count<pos-1)
 			{
 				previous=previous.next;
 				count++;
