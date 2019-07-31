@@ -103,11 +103,30 @@ public class Utility {
 		return mNumber<0;
 	}
 	/*
-	 * return integer value
+	 * return integer value from keyboard
 	 */
 	public int getInteger()
 	{
 		return scanner.nextInt();
+	}
+	/*
+	 * return string value from keyboard
+	 */
+	public String getString()
+	{
+		return scanner.next();
+	}
+	/*
+	 * Swap character in l and r position of string s
+	 */
+	public String swap(String s,int l,int i)
+	{
+		char[] charArray=s.toCharArray();
+		char temp=charArray[l];
+		charArray[l]=charArray[i];
+		charArray[i]=temp;
+		
+		return String.valueOf(charArray);
 	}
 	
 }
