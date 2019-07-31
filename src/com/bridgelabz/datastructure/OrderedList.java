@@ -1,7 +1,5 @@
 /*
- * @purpose	:Read .a List of Numbers from a file and arrange it ascending Order in a
- * Linked List. Take user input for a number, if found then pop the number out of the
- * list else insert the number in appropriate position
+ * @purpose	:Ordered linked list,find element in list if find remove element if not add in linklist
  * @auhor	:sangita awaghad
  * @since	:30-07-2019
  */
@@ -9,6 +7,7 @@
 package com.bridgelabz.datastructure;
 
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,9 +19,9 @@ public class OrderedList {
 	public static void main(String args[])
 	{
 		try {
-			
-			FileReader fr=new FileReader("/home/user/Desktop/sangita.txt");
-			Scanner scanner=new Scanner(fr);
+			File f=new File("/home/user/Desktop/sangita.txt");
+			FileReader filereader=new FileReader(f);
+			Scanner scanner=new Scanner(filereader);
 			Scanner scannerUserValue=new Scanner(System.in);
 			int data;
 			while(scanner.hasNext())
@@ -32,8 +31,8 @@ public class OrderedList {
 				LinkedList.add(data);
 			}
 			int search;
-			Node previous=LinkedList.HEAD;
-			System.out.println();
+//			Node previous=LinkedList.HEAD;
+//			System.out.println();
 			LinkedList.sort();
 			do
 			{
@@ -47,7 +46,6 @@ public class OrderedList {
 					if(position!=-1)
 					{
 						System.out.println(search +" is FOUND");
-						System.out.println(position +" is FOUND");
 						LinkedList.delete(position);
 						
 					}
@@ -62,17 +60,18 @@ public class OrderedList {
 				
 			}while(search!=0);
 			LinkedList.sort();
-			Writer wr= new FileWriter("/home/user/Desktop/sangita.txt",false);
+			Writer writer= new FileWriter(f,false);
 			
 			Node temp=LinkedList.HEAD;
 			while(temp!=null)
 			{
-				wr.write(temp.number+" ");
-				wr.flush();
+				writer.write(temp.number+" ");
+				writer.flush();
 				temp=temp.next;
 			}
-			
-			
+			scanner.close();
+			scannerUserValue.close();
+			writer.close();
 		}catch(IOException e)
 		{
 			System.out.println(e.getMessage());

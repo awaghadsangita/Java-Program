@@ -20,11 +20,11 @@ public class LeapYear {
 		}while(utility.isFourDigit(mYear));
 		
 		
-		int result=utility.checkerLeapYear(mYear);;
+		boolean result=utility.checkerLeapYear(mYear);
 		
-		if(result==1)
+		if(result)
 			System.out.println("Year "+mYear+" is Leap Year");
-		else if(result==0)
+		else 
 			System.out.println("Year "+mYear+" is not Leap Year");
 	 
 	}
