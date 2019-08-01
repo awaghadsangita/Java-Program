@@ -6,18 +6,15 @@
  */
 package com.bridgelabz.functional;
 
-import java.util.Scanner;
-
 import com.bridgelabz.utility.Utility;
 
 public class CouponNumbers {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		int mNumber;
-		Scanner sc=new Scanner(System.in);
-		Utility utility=new Utility();
+		Utility utility = new Utility();
 		System.out.println("How Many Coupan You Want");
-		mNumber=sc.nextInt();
+
+		mNumber=utility.getInteger();
 		
 		int[] mCoupan=new int[mNumber];
 		int mCount=0;
@@ -30,25 +27,23 @@ public class CouponNumbers {
 			int k=0;
 			for(int j=0;j<i;j++)
 			{
-				if(mCoupan[j]==mRandomNumber)
+				if(mCoupan[j]==mRandomNumber )
 				{
 					break;
 				}
 				k++;
 			}
-			if(i==k)
-			{
-				mCoupan[i]=mRandomNumber;
+			if (i == k) {
+				mCoupan[i] = mRandomNumber;
 				mCount++;
 			}
-			i=mCount;
+			i = mCount;
 		}
 		System.out.println("Generated Coupans are as follows");
-		
-		for(i=0;i<mNumber;i++)
-		{
-			System.out.println((i+1)+" Coupan Number is : "+mCoupan[i] );//printing Random number Coupan
+
+		for (i = 0; i < mNumber; i++) {
+			System.out.println((i + 1) + " Coupan Number is : " + mCoupan[i]);// printing Random number Coupan
 		}
-		System.out.println("Total number of Coupans: "+mCount);
+		System.out.println("Total number of Coupans: " + mCount);
 	}
 }
