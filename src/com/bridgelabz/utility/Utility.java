@@ -134,5 +134,33 @@ public class Utility {
 
 		return String.valueOf(charArray);
 	}
+	/*Program for Anagram Detection*
+	 * @param fString denote first string
+	 * @param sString denote second string
+	*/
+	
+	public boolean checkAnagram(String fString, String sString) {
+		int i = 0;
+		int[] firstCount = new int[256];
+		int[] secondCount = new int[256];
+
+		char[] charArr1 = fString.toCharArray();
+		char[] charArr2 = sString.toCharArray();
+		if (fString.length() != sString.length())
+			return false;
+		else {
+			for (i = 0; i < fString.length(); i++) {
+				firstCount[charArr1[i]]++;
+				secondCount[charArr2[i]]++;
+			}
+
+			for (i = 0; i < 256; i++) {
+				if (firstCount[i] != secondCount[i]) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
 
 }
