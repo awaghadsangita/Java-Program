@@ -6,6 +6,7 @@
  */
 package com.bridgelabz.utility;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -162,5 +163,38 @@ public class Utility {
 			return true;
 		}
 	}
-
+	/*Program to find prime numbers between given range;
+	 * @param start denote start point
+	 * @param stop denote end point*/
+	public int[] findPrime(int start,int stop)
+	{
+		int i;
+		boolean isPrime=false;
+		ArrayList<Integer> prime=new ArrayList<Integer>();
+		for(i=start;i<=stop;i++)
+		{
+			if(i>=2)
+			{
+				isPrime=true;
+				for(int j=2;j<=(i/2);j++)
+				{
+					if(i%j==0)
+					{
+						isPrime=false;
+						break;
+					}
+				}
+				if(isPrime)
+				{
+					prime.add(i);
+				}
+			}
+		}
+		int primeArray[]=new int[prime.size()];
+		
+		for (i =0; i < prime.size(); i++) 
+	            primeArray[i] = prime.get(i);
+		
+		return primeArray; 
+	}
 }
