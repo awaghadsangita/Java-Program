@@ -177,12 +177,12 @@ public class ElapseTimeSearchingSorting {
 //			06-String Binary Sort
 		}
 
-		for (int k = 0; k < 6; k++) {
-			System.out.println("Elapse Time for " + method[k] + " is :" + elapseTime[k]);
-		}
+//		for (int k = 0; k < 6; k++) {
+//			System.out.println("Elapse Time for " + method[k] + " is :" + elapseTime[k]);
+//		}
 
 		System.out.println("\n");
-		for (int i = 0; i < 6; i++) {
+		for (int i = 1; i < 6; i++) {
 			for (int j = 0; j < 6 - i; j++) {
 				if (elapseTime[j] > elapseTime[j + 1]) {
 					long t = elapseTime[j];
@@ -198,7 +198,7 @@ public class ElapseTimeSearchingSorting {
 
 		}
 		for (int i = 0; i < 6; i++) {
-			System.out.println("Elapse Time for" + method[i] + " is :" + elapseTime[i]);
+			System.out.println("Elapse Time for " + method[i] + " is :" + elapseTime[i]);
 		}
 	}
 }
