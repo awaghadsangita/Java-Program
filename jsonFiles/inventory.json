@@ -1,0 +1,11 @@
+{"rice":[{"name":"Rice1","weight":30,"price":50},
+	{"name":"Rice2","weight":45,"price":150},
+	{"name":"Rice3","weight":60,"price":200}],
+"wheats":[{"name":"Wheats1","weight":30,"price":50},
+	{"name":"Wheats2","weight":45,"price":150},
+	{"name":"Wheats3","weight":60,"price":200}],
+"pulses":[{"name":"Pulses1","weight":30,"price":50},
+	{"name":"Pulses2","weight":45,"price":150},
+	{"name":"Pulses3","weight":60,"price":200}]
+}
+

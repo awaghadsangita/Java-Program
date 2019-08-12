@@ -1,0 +1,9 @@
+[{"doctorId":1,"doctorName":"Vaishu","specialization":"MBBS,MD Surgen","availability":"AM"},
+{"doctorId":2,"doctorName":"Sangita","specialization":"MBBS,MD Pedratics","availability":"AM"},
+{"doctorId":3,"doctorName":"Shilapa","specialization":"MBBS,MD gynecology","availability":"AM"},
+{"doctorId":4,"doctorName":"Rahul","specialization":"MBBS,MD Surgen","availability":"PM"},
+{"doctorId":5,"doctorName":"Vikas","specialization":"MBBS,MD Pedratics","availability":"PM"},
+{"doctorId":6,"doctorName":"Kavita","specialization":"MBBS,MD gynecology","availability":"PM"},
+{"doctorId":7,"doctorName":"Nilesh","specialization":"MBBS,MD Surgen","availability":"BOTH"},
+{"doctorId":8,"doctorName":"Priyanka","specialization":"MBBS,MD Pedratics","availability":"BOTH"},
+{"doctorId":9,"doctorName":"Neeta","specialization":"MBBS,MD gynecology","availability":"BOTH"}]
