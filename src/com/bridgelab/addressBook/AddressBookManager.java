@@ -21,6 +21,7 @@ public class AddressBookManager {
 		do {
 			System.out.println("1.Add New Address Book)");
 			System.out.println("2.Open existing address Book");
+			System.out.println("3.Save existing address book with new name");
 			System.out.println("Enter your Choice");
 			mainDoWhileChoice=Utility.getInteger();
 			switch(mainDoWhileChoice)
@@ -59,6 +60,10 @@ public class AddressBookManager {
 					innerdowhileChoice=Utility.getInteger();
 			    }while(innerdowhileChoice==1);
 					break;
+			case 3:
+				AddressBookManagment.saveAsFile();
+				break;
+			default:System.out.println("Enter the valid choice");
 			}
 		}while(mainDoWhileChoice!=7);
 	

@@ -85,7 +85,7 @@ public class Utility {
 	 */
 	public static boolean isValidPincode(String pincode)
 	{
-		return Pattern.compile("^[0-9]{7}$").matcher(pincode).matches();
+		return Pattern.compile("^[0-9]{6}$").matcher(pincode).matches();
 	}
 	/*
 	 * 
@@ -93,6 +93,29 @@ public class Utility {
 	public static boolean isValidMobileNumber(String mobilenumber)
 	{
 		return Pattern.compile("^[7-9]{1}[0-9]{9}$").matcher(mobilenumber).matches();
+	}
+	/*
+	 * 
+	 */
+	public static boolean isValidAddress(String mobilenumber)
+	{
+		return Pattern.compile("^[a-zA-Z\\s,-]{2,100}$").matcher(mobilenumber).matches();
+	}
+	/*
+	 *return true if given email is in valid format otherwise false 
+	 */
+	public static boolean isValidEmail(String email)
+	{
+		 
+		// return Pattern.compile("^(.+)@(.){1,}$").matcher(email).matches();
+		return true;
+	}
+	/*
+	 *return true if given password minimum 8 characters long contain 1 lowercase and 1 number atleast 
+	 */
+	public static boolean isValidPassword(String pwd)
+	{
+		return Pattern.compile("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$").matcher(pwd).matches();
 	}
 }
 

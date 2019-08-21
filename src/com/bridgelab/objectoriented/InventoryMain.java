@@ -1,4 +1,4 @@
-/****************************************************************************************************
+/* **************************************************************************************************
  * @purpose	:showing various products first and after giving product shows details of product
  * @author	:sangita awaghad
  * @version	:1.0
@@ -41,6 +41,7 @@ public class InventoryMain {
 			}
 		JsonNode actualTree=objectmapper.readTree(Filename);
 		JsonNode RequiredNode=actualTree.get(product);
+		
 		for(JsonNode node:RequiredNode)
 		{
 			InventoryProduct inventory=objectmapper.readValue(node, InventoryProduct.class);
@@ -48,9 +49,8 @@ public class InventoryMain {
 			System.out.println("Weight :"+inventory.getWeight());
 			System.out.println("Price :"+inventory.getPrice());
 			System.out.println("************************************************************");
-			
 		}
-		
+				
 		System.out.println("do you want to see other inventory details press 1 otherwise press 0");
 		choice=Utility.getInteger();
 		

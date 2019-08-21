@@ -163,14 +163,18 @@ public class Operation {
 	 */
 	public String showAppointment(Doctors doctorObj) {
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		String ldate = format.format(LocalDate.now()).toString();
+		String ldate = format.format(LocalDate.now());
 		for (Appointments appointment : appointmentList) {
 			if (appointment.getAppintmentDate().compareTo(ldate) >= 0
 					&& appointment.getDoctorId() == doctorObj.getDoctorId()) {
 				System.out.println("Appoint Date :" + appointment.getAppintmentDate());
-				System.out.println("Patient Name :" + appointment.getPatientId());
+				System.out.println("Patient Name :" + getPatientName(appointment.getPatientId()));
 				ldate = appointment.getAppintmentDate();
 			}
+		}
+		if(ldate.compareTo(format.format(LocalDate.now()))<0)
+		{
+			ldate=format.format(LocalDate.now());
 		}
 		return ldate;
 	}
@@ -236,6 +240,9 @@ public class Operation {
 					count = 0;
 				}
 			}
+			
+			
+			
 		}
 		Patients patientObj = new Patients();
 		System.out.println("New Patient Press 1 otherwise 0");
@@ -280,7 +287,7 @@ public class Operation {
 
 		}
 		Appointments appointment = new Appointments();
-		appointment.setAppointmentId(appointmentList.size() + 1);
+		appointment.setAppointmentId(appointmentList.get(appointmentList.size()-1).getAppointmentId() + 1);
 		appointment.setDoctorId(doctorObj.getDoctorId());
 		appointment.setPatientId(patientObj.getPatientId());
 		appointment.setAppintmentDate(lastDate);
@@ -291,7 +298,7 @@ public class Operation {
 		if (choice == 1) {
 			objectmapper.writeValue(patientsFileName, patientsList);
 			objectmapper.writeValue(appointmentFileName, appointmentList);
-			System.out.println(patientObj.getPatientName()+"your Appointment is Scheduled on "+appointment.getAppintmentDate());
+			System.out.println(patientObj.getPatientName()+" your Appointment is Scheduled on "+appointment.getAppintmentDate());
 		} else {
 			System.out.println("Your Appointment Cancel");
 		}

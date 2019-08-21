@@ -1,5 +1,5 @@
 /***************************************************************************************************
- * @purpose	:contain method like buy,sell and save require for commercial data Processing
+                                                                                                                          * @purpose	:contain method like buy,sell and save require for commercial data Processing
  * @author	:sangita awaghad
  * @version	:1.0
  * @since	:12-08-2019

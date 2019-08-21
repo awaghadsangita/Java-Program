@@ -17,7 +17,6 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
 
-
 public class InventoryManager {
 	public static void main(String args[]) throws JsonParseException, JsonMappingException, IOException
 	{

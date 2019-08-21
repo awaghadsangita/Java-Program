@@ -86,7 +86,7 @@ public class AddressBook implements IPerson {
 			System.out.print("Enter Addres :");
 			person.setAddress(Utility.getNextLine());
 
-			matcherResult = Utility.isOnlyAlphabets(person.getAddress());
+			matcherResult = Utility.isValidAddress(person.getAddress());
 			if (!matcherResult) {
 				System.out.println("address only include  alphabets ,hyphen and commononly ");
 			}
@@ -387,7 +387,7 @@ public class AddressBook implements IPerson {
 			}
 			temporyList[j + 1] = key;
 		}
-		System.out.println("Pincode \t\tCity \t\tId \t\tFirst Name \t\tLast Name \t\t\tMobile Number");
+		System.out.println("Zipcode \t\tCity \t\tId \t\tFirst Name \t\tLast Name \t\t\tMobile Number");
 		for (Person tempObj : temporyList) {
 			System.out.printf("%-20s %-20s %-20s %-15s %-25s %-20s\n", tempObj.getCity().getZip(),
 					tempObj.getCity().getCityName(), tempObj.getPersionId(), tempObj.getFirstName(),
@@ -411,5 +411,12 @@ public class AddressBook implements IPerson {
 	public void saveFile(File personFileName, List<Person> personList)
 			throws JsonGenerationException, JsonMappingException, IOException {
 		objectmapper.writeValue(personFileName, personList);
+	}
+	/*
+	 * 
+	 */
+	public void saveAsFile(File file)throws JsonGenerationException, JsonMappingException, IOException
+	{
+		objectmapper.writeValue(file,personList);
 	}
 }
